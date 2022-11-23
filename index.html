@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style media="screen">
+
+    body{
+    font-family: tahoma, Arial,  sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    #principal{
+        width: 1024px;
+        margin: 20px auto;
+    }
+    .header-top{
+        height: 120px;
+        background-color: orange;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .logotipo{
+        height: 100%;
+        margin: 0px 0 0 0 ;
+    }
+
+    .header-nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+    .header-nav ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-nav li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 15px 0 0;
+        padding: 15px;
+    }
+
+    .header-nav a{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .header-nav a:hover{
+        color:gray;
+    }
+
+    .portifolio{
+        padding: 50px 100px;
+        text-align: center;
+    }
+
+    .portifolio h1{
+        font-size: 36px;
+        color: orange;
+    }
+
+    .portifolio p{
+        font-size: 16px;
+        line-height: 2;
+    }
+    .gallery{
+        color: orange;
+        padding: 0 100px 50px 100px;
+        overflow: auto;
+    }
+
+    .gallery-card{
+        width: 32%;
+        float: left;
+        text-align: center;
+    }
+
+    .imgmenu{
+    width: 200px;
+    }
+
+    .imgmain{
+    width: 1024px;
+    }
+
+    .gallery-text{
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .about{
+        background-color: orange;
+        padding: 100px;
+        color: white;
+        background-repeat: no-repeat;
+    }
+
+    .about h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        text-shadow: 5px 5px 5px rgb(12, 11, 11);
+     }
+
+     .about p{
+        line-height: 1.5;
+        width: 70%;
+        text-shadow: 5px 5px 5px rgb(12, 11, 11);
+     }
+
+     #contact{
+        margin: 50px 0;
+     }
+
+     #contact address{
+        font-size: 26px;
+        text-transform: uppercase;
+        font-style: normal;
+        text-align: center;
+        color: orange;
+        font-weight: bold;
+     }
+       .maps{
+        width: 100%;
+        height: 450px;
+        margin-top: 25px;
+        text-align: center;
+     }
+     .maps iframe{
+            width: 100%;
+     }
+     footer{
+        background-color: orange;
+        padding: 25px;
+        font-size: 12px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 5px;
+     }
+
+    </style>
+    <title>Downhill</title>
+</head>
+<body>
+    <div id= "principal">
+
+        <header class="header-top">
+            <img class="logotipo"
+            src="data:image/png;base64,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">
+            <nav class="header-nav">
+          <ul>
+              <li><a href="https://github.com/CleberPrestes">Portifolio</a></li>
+              <li><a href="sobre.html">Sobre nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+          </ul>
+          </nav>
+        </header>
+
+        <img class="imgmain" src="https://i.pinimg.com/originals/5f/1f/69/5f1f69de1e4bb6035fba29ed9d005d3a.jpg">
+        <article class="portifolio">
+            <h1>Downhill</h1>
+            <h2></h2>
+            <p>Dowhill é uma modalidade do mountain bike que consiste em descer, com a maior velocidade possível, um percurso com diversos obstáculos e irregularidades ou uma montanha.
+
+Os trajetos de descida são bastante variados, mas sempre muito íngremes e costumam exigir bastante conhecimento e técnica do ciclista para passar ileso pelos diferentes obstáculos como pedras soltas, galhos de árvore, buracos, pontes, raízes e vários outros.
+
+As pistas são bem rápidas e em muitas, os ciclistas atingem velocidades de até 80 km/h.
+
+.</p>
+            <p></p>
+            <h2>Como começar o Downhill</h2>
+            <p>O downhill nasceu na Califórnia na segunda metade da década de 1970. Os ciclistas da época, cansados de pedalarem apenas no asfalto, se reuniam nas montanhas de Marin County, próximo de São Francisco, para descerem montanha abaixo.
+
+Na época, eles usavam uma bike tipo cruiser adaptada para o uso na terra, com pneus mais largos e travões mais potentes. Alguns nomes desses ciclistas pioneiros são Joe Breeze, Gary Fischer, Tom Ritchey e Charlie Kelly – hoje  importantes empresários da indústria do mountain bike.
+
+</p>
+            <p>Pode-se dizer que o downhill nasceu antes mesmo da criação da mountain bike, já que a primeira versão desse tipo de bicicleta foi construída apenas em 1978, por Joe Breeze e, em 21 de outubro de 1976, ocorreu o primeiro campeonato de downhill, na cidade de Fairfax, na Califórnia.
+
+As bicicletas usadas nessa primeira competição eram comuns de passeio, com apenas o freio traseiro do tipo “contrapedal” (no qual você precisa pedalar para trás para conseguir reduzir a velocidade).
+
+Apesar de já existir há mais tempo que a própria mountain bike, as primeiras competições oficiais de downhill apenas iniciaram em 1990, com o Campeonato Mundial realizado no Colorado, nos Estados Unidos. No Brasil, as primeiras competições ocorreram em 1991 com bicicletas de cross country.</p>
+        </article>
+        <section class="gallery">
+            <article class="gallery-card">
+                <img class="imgmenu" src="https://www.jornalmetas.com.br/web_arquivos/1.2341459/imagens/16243904357530.jpg" alt="">
+                <p class="gallery-title"></p>
+                <p class="gallery-text">
+                    Bicicletas de downhill
+              </p>
+            </article>
+            <article class="gallery-card">
+                <img class="imgmenu" src="https://mxbikes.com.br/blog/img/imagens_colunas/foto_750.jpg" alt="">
+                <p class="gallery-title"></p>
+                <p class="gallery-text">
+                    Equipamentos para a modalidade
+                </p>
+            </article>
+            <article class="gallery-card">
+                <img class="imgmenu" src="https://i.ytimg.com/vi/pDUs19gj9ng/maxresdefault.jp">
+                <p class="gallery-title"></p>
+                <p class="gallery-text">
+                    Bicicletas de downhill
+                </p>
+            </article>
+        </section>
+        <article class="about">
+            <h2>Caracteristicas da modalidade</h2>
+            <p>
+Downhill é uma modalidade do “Mountain Bike” onde se desce o mais rápido possível um trajeto. Esses trajetos são bastante variados, muito íngremes e exigem muita técnica e conhecimento da modalidade, possuem muitos obstáculos como galhos, pedras soltas, buracos, raízes, pontes, etc</p>
+            <p></p>
+        </article>
+        <div id="contact">
+            <address>
+                Ligue me para fazer sites
+                <br>
+                987654321
+            </address>
+            <div class="maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28878.127840569763!2d-49.134934015860715!3d-25.21111332319534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcc153d5264611%3A0xdd193cb59e9f8561!2sBocai%C3%BAva%20do%20Sul%2C%20PR%2C%2083450-000!5e0!3m2!1spt-BR!2sbr!4v1622641309172!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <footer>
+            Autor:
+            <br>
+            Gabriel Polli 1C N°14
+        </footer>
+    </div>
+</body>
+</html>
